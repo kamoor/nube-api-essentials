@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.nube.api.nube-api-essentials</groupId>
+		<artifactId>nube-api-essentials-parent</artifactId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>nube-api-essentials-server</artifactId>
+	<name>Nube Api Essentials Spring Boot Server</name>
+	<url>http://nube.com</url>
+
+	<properties>
+		<start-class>com.nube.api.essentials.server.NubeServer</start-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${parent.groupId}</groupId>
+			<artifactId>nube-api-essentials</artifactId>
+			<version>${parent.version}</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
